@@ -6,7 +6,7 @@ const link = props => {
     <Link
       className={props.classes}
       style={{ cursor: 'pointer' }}
-      activeClass='active'
+      activeclass='active'
       to={props.target}
      
     >

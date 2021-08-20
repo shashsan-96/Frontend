@@ -31,9 +31,9 @@ const home = () => {
         </div>
       </div>
       <div className="se1">
-        <div class="container">
-          <div class="row text-center text-lg-start">
-            <div class="col-lg-3 col-md-4 col-6">
+        <div className="container">
+          <div className="row text-center text-lg-start">
+            <div className="col-lg-3 col-md-4 col-6">
               <Card className="card1">
                 <Card.Img variant="top" src={loupe} style={{ height: "100px",width:'100px',marginLeft:"70px" }}/>
                 <Card.Body>
@@ -45,7 +45,7 @@ const home = () => {
               </Card>
             </div>
 
-            <div class="col-lg-3 col-md-4 col-6">
+            <div className="col-lg-3 col-md-4 col-6">
               <Card className="card1">
                 <Card.Img variant="top" src={book} style={{ height: "100px",width:'100px',marginLeft:"70px" }}/>
                 <Card.Body>
@@ -57,7 +57,7 @@ const home = () => {
               </Card>
             </div>
 
-            <div class="col-lg-3 col-md-4 col-6">
+            <div className="col-lg-3 col-md-4 col-6">
               <Card className="card1">
                 <Card.Img variant="top" src={clock} style={{ height: "100px",width:'100px',marginLeft:"70px" }}/>
                 <Card.Body>
@@ -75,24 +75,24 @@ const home = () => {
       <div className='se2'>
 
          
-      <div class="container">
-      <h2 class="fw-light text-center text-lg-start mt-4 mb-0">Featured New Release Books </h2>
-      <hr class="mt-2 mb-5"/>
+      <div className="container">
+      <h2 className="fw-light text-center text-lg-start mt-4 mb-0">Featured New Release Books </h2>
+      <hr className="mt-2 mb-5"/>
 
-          <div class="row text-center text-lg-start">
-            <div class="col-lg-3 col-md-4 col-6">
+          <div className="row text-center text-lg-start">
+            <div className="col-lg-3 col-md-4 col-6">
             <Image src={a} thumbnail style={{ height: "200px"}} />
             </div>
 
-            <div class="col-lg-3 col-md-4 col-6">
+            <div className="col-lg-3 col-md-4 col-6">
             <Image src={b} thumbnail style={{ height: "200px"}}/>
             </div>
 
-            <div class="col-lg-3 col-md-4 col-6">
+            <div className="col-lg-3 col-md-4 col-6">
             <Image src={c} thumbnail style={{ height: "200px"}}/>
             </div>
 
-            <div class="col-lg-3 col-md-4 col-6">
+            <div className="col-lg-3 col-md-4 col-6">
             <Image src={d} thumbnail style={{ height: "200px"}}/>
             </div>
           </div>
@@ -100,7 +100,7 @@ const home = () => {
       </div>
 
       <div className='se3'>
-      <h4 class="fw-light text-center text-lg-start mt-4 mb-0">Read books from the best publishers</h4>
+      <h4 className="fw-light text-center text-lg-start mt-4 mb-0">Read books from the best publishers</h4>
        <p>
 We are online retail store selling books published and edited by the most competent and recognized publishers.
 Enjoy the best possible online book buying experience with our reliable book store!</p>
@@ -113,24 +113,24 @@ Enjoy the best possible online book buying experience with our reliable book sto
       <div className='se4'>
 
          
-      <div class="container">
-      <h2 class="fw-light text-center text-lg-start mt-4 mb-0">Best sellers in Books</h2>
-      <hr class="mt-2 mb-5"/>
+      <div className="container">
+      <h2 className="fw-light text-center text-lg-start mt-4 mb-0">Best sellers in Books</h2>
+      <hr className="mt-2 mb-5"/>
 
-          <div class="row text-center text-lg-start">
-            <div class="col-lg-3 col-md-4 col-6">
+          <div className="row text-center text-lg-start">
+            <div className="col-lg-3 col-md-4 col-6">
             <Image src={e} thumbnail style={{ height: "200px"}} />
             </div>
 
-            <div class="col-lg-3 col-md-4 col-6">
+            <div className="col-lg-3 col-md-4 col-6">
             <Image src={f} thumbnail style={{ height: "200px"}}/>
             </div>
 
-            <div class="col-lg-3 col-md-4 col-6">
+            <div className="col-lg-3 col-md-4 col-6">
             <Image src={g} thumbnail style={{ height: "200px"}}/>
             </div>
 
-            <div class="col-lg-3 col-md-4 col-6">
+            <div className="col-lg-3 col-md-4 col-6">
             <Image src={h} thumbnail style={{ height: "200px"}}/>
             </div>
           </div>
