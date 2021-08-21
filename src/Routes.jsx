@@ -7,7 +7,7 @@ import Navbar from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
 import Login from "./components/Login/Login";
 import Reg from "./components/Register/Register";
-
+import Prof from "./components/Profile/Profile"
 
 
 
@@ -32,6 +32,7 @@ const RouterMain = ({ component: Component, ...rest }) => {
     <RouterMain exact path={'/'} component={Home} />
     <RouterMain exact path={'/login'} component={Login} />
     <RouterMain exact path={'/register'} component={Reg} />
+    <RouterMain exact path={'/profile'} component={Prof} />
     <Redirect to={'/'} />
   </Switch>
 );

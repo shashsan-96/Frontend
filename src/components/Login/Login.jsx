@@ -52,7 +52,7 @@ const Login = () => {
               error.response.data.message) ||
             error.message ||
             error.toString();
-            console.log(resMessage);
+            console.error(resMessage);
             notify(resMessage);
         }
       );
