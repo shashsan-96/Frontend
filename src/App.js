@@ -15,7 +15,7 @@ import Footer from './components/Footer/Footer';
 
 import Navbar from "./components/Header/Header";
 
-import './app.css';
+import './StyleStationery.css';
 import '../src/scss/main.scss';
 import '../src/scss/_header.scss';
 import '../src/scss/_footer.scss';
