@@ -4,7 +4,8 @@ import { useHistory } from "react-router";
 import { Link } from '@material-ui/core';
 import { useFormik } from "formik";
 import * as Yup from "yup";
-import { ToastContainer,toast ,Slide} from 'react-toastify'
+import { ToastContainer,toast} from 'react-toastify'
+import {notifyErr,notifyWar,notifySuccess} from "../Toast/Toast"
 import 'react-toastify/dist/ReactToastify.css'
 import bg from "../../assets/bg5.svg";
 import auth from "../../api/auth.service"
@@ -12,20 +13,17 @@ toast.configure();
 
 const Login = () => {
 
-  const notify = (e) => {
-    
-    toast.error(e, {
-      position: "top-right",
-      autoClose: 6000,
-      transition: Slide
-    })
-  }
 
   const history = useHistory();
   const user = auth.getCurrentUser();
 
   if (user !== null) {
-    history.push("/");
+    notifyWar("Already Loged In");
+    window.setTimeout(() => {
+      history.push("/");
+    }, 3000);
+
+    
   }
 
   const formik = useFormik({
@@ -42,8 +40,12 @@ const Login = () => {
     onSubmit: (values) => {
       auth.login(values.userName, values.password).then(
         () => {
-          history.push("/");
-          window.location.reload();
+
+          notifySuccess("Loged in");
+          window.setTimeout(() => {
+            history.push("/");
+            window.location.reload();
+          }, 3000);  
         },
         (error) => {
           const resMessage =
@@ -53,7 +55,7 @@ const Login = () => {
             error.message ||
             error.toString();
             console.error(resMessage);
-            notify(resMessage);
+            notifyErr(resMessage);
         }
       );
     },

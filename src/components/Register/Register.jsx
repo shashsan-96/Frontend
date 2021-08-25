@@ -5,20 +5,14 @@ import { Link } from '@material-ui/core';
 import { useFormik } from "formik";
 import * as Yup from "yup";
 import bg from "../../assets/bg6.svg";
-import { ToastContainer, toast, Slide } from "react-toastify";
+import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import auth from "../../api/auth.service";
+import {notifyErr,notifySuccess} from "../Toast/Toast"
 toast.configure();
 
 const Reg = () => {
-  const notify = (e) => {
-    toast.error(e, {
-      position: "top-right",
-      autoClose: 6000,
-      transition: Slide,
-    });
-  };
-
+  
   const history = useHistory();
   const user = auth.getCurrentUser();
 
@@ -45,7 +39,7 @@ const Reg = () => {
         .min(8, "Password is too short - should be 8 chars minimum.")
         .matches(
           /^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,}$/,
-          "Must Contain 8 Characters, One Uppercase, One Lowercase, One Number and one special case Character"
+          "Must Contain more than 8 Characters, One Uppercase, One Lowercase, One Number and one special case Character"
         ),
       passwordConfirmation: Yup.string()
         .oneOf([Yup.ref("password"), null], "Passwords must match")
@@ -54,8 +48,11 @@ const Reg = () => {
     onSubmit: (values) => {
       auth.register(values.userName, values.email, values.password).then(
         () => {
-          history.push("/login");
-          window.location.reload();
+          notifySuccess("Registered")
+          window.setTimeout(() => {
+            history.push("/login");
+            window.location.reload();
+          }, 3000); 
         },
         (error) => {
           const resMessage =
@@ -64,7 +61,7 @@ const Reg = () => {
               error.response.data.message) ||
             error.message ||
             error.toString();
-          notify(resMessage);
+          notifyErr(resMessage);
         }
       );
     },

@@ -72,7 +72,7 @@ const Nav = () => {
   }, [use]);
   return (
     <nav className={`navbar navbar-expand-md bg-light ${navClass}`}>
-      <div className="container">
+      <div className="container-sm">
         <a className="navbar-brand" href="/">
           <span>Akura</span>
           <i className="fas fa-circle ml-1" />
@@ -131,6 +131,7 @@ const Nav = () => {
                 <Button
                   className="nav-button"
                   type="button"
+                  variant="danger"
                   onClick={(e) => {
                     e.preventDefault();
                     auth.logout();

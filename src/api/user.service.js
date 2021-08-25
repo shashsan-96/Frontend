@@ -6,7 +6,6 @@ const API_URL = "http://localhost:8000/api/shop/";
 
 const getUserByID = (id) => {
   const a  = axios.get(API_URL +`user/${id}`, { headers: authHeader() });
-  console.log(a);
   return a;
 };
 

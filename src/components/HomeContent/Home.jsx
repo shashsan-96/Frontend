@@ -21,7 +21,7 @@ const home = () => {
           className="home-content p-5"
           style={{ backgroundImage: `url(${bgImage})` }}
         >
-          <div className="intro container text-center text-light">
+          <div className="intro container-sm text-center text-light">
             <h1 className="title">WELCOME</h1>
             <h2 className="sub-title mb-4">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores
@@ -31,7 +31,7 @@ const home = () => {
         </div>
       </div>
       <div className="se1">
-        <div className="container">
+        <div className="container-sm">
           <div className="row text-center text-lg-start">
             <div className="col-lg-3 col-md-4 col-6">
               <Card className="card1">
@@ -75,7 +75,7 @@ const home = () => {
       <div className='se2'>
 
          
-      <div className="container">
+      <div className="container-sm">
       <h2 className="fw-light text-center text-lg-start mt-4 mb-0">Featured New Release Books </h2>
       <hr className="mt-2 mb-5"/>
 
@@ -113,7 +113,7 @@ Enjoy the best possible online book buying experience with our reliable book sto
       <div className='se4'>
 
          
-      <div className="container">
+      <div className="container-sm">
       <h2 className="fw-light text-center text-lg-start mt-4 mb-0">Best sellers in Books</h2>
       <hr className="mt-2 mb-5"/>
 
