@@ -137,7 +137,7 @@ function Feed() {
   useEffect(() => {
      test()
 
-    UserService.getUser().then(
+    UserService.getAdmin().then(
       (response) => {},
       (error) => {
         const resMessage =
