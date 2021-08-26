@@ -50,7 +50,7 @@ const Reg = () => {
         () => {
           notifySuccess("Registered")
           window.setTimeout(() => {
-            history.push("/login");
+            history.push("/load");
             window.location.reload();
           }, 3000); 
         },
