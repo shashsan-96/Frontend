@@ -16,6 +16,7 @@ const deleteUserByID = (id) => {
 
 const updateUser = (id,data) => {
   const a  = axios.put(API_URL +`user/${id}`,data, { headers: authHeader() });
+  console.log(data)
   return a;
 };
 
