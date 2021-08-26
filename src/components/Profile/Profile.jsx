@@ -12,7 +12,6 @@ import EditIcon from "@material-ui/icons/Edit";
 import { purple } from "@material-ui/core/colors";
 import FeedbackIcon from "@material-ui/icons/Feedback";
 import Image from "react-bootstrap/Image";
-import a from "../../assets/avt.svg";
 import { Dialog, DialogActions, DialogTitle } from "@material-ui/core";
 
 
@@ -98,7 +97,10 @@ const Regular = () => {
       window.location.href = "/feedBack";
     }
 
-
+    const update = () =>
+    {
+      window.location.href = "/profileUpdate";
+    }
   
 
   return (
@@ -134,7 +136,7 @@ const Regular = () => {
           Profile
         </Typography>
         <Image
-          src={a}
+          src={"http://localhost:8000/image/"+auth.getCurrentUser().profilePic}
           roundedCircle
           style={{ height: "100px", marginLeft: "10px", marginBottom: "20px" }}
         />
@@ -210,7 +212,7 @@ const Regular = () => {
           color="primary"
           className={classes.button}
           startIcon={<EditIcon />}
-          onClick={handleClickOpen}
+          onClick={update}
         >
           Edit _______
         </Button>
