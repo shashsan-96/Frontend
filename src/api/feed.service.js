@@ -8,7 +8,6 @@ const API_URL = "http://localhost:8000/api/shop/";
 
 const createFeedBack = (rate, message, date) => {
 
-    console.log("f"+date)
     const a  = axios.post(API_URL +"user/feedBack",{
         rate,
         message,
