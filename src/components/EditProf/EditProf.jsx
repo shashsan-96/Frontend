@@ -33,13 +33,25 @@ const useStyles = makeStyles({
     },
   });
 const schema = yup.object().shape({
-  firstname: yup.string().required(),
-  lastname: yup.string().required(),
-  address:yup.string().required(),
-  email: yup.string(),
-  city: yup.string().required(),
-  mobile: yup.string().required(),
-  country: yup.string().required(),
+  firstname: yup.string().required().min(3, "?")
+  .max(25, "Input 25 characters or below")
+  .matches(/^[A-Za-z ]*$/, 'Please enter valid name'),
+  lastname: yup.string().required().min(3, "?")
+  .max(25, "Input 25 characters or below")
+  .matches(/^[A-Za-z ]*$/, 'Please enter valid name'),
+  address:yup.string().required().min(3, "?")
+  .max(50, "Input 50 characters or below")
+  .matches(/^[A-Za-z ]*$/, 'Please enter valid address'),
+  email: yup.string().required(),
+  city: yup.string().required().min(3, "?")
+  .max(50, "Input 50 characters or below")
+  .matches(/^[A-Za-z ]*$/, 'Please enter valid city'),
+  mobile: yup.string().required().matches(/^((\\+[1-9]{1,4}[ \\-]*)|(\\([0-9]{2,3}\\)[ \\-]*)|([0-9]{2,4})[ \\-]*)*?[0-9]{3,4}?[ \\-]*[0-9]{3,4}?$/, 'Phone number is not valid')
+  .min(10)
+  .max(10),
+  country: yup.string().required().min(3, "?")
+  .max(30, "Input 50 characters or below")
+  .matches(/^[A-Za-z ]*$/, 'Please enter valid Country'),
   zip: yup.string().required(),
   profilePic: yup.mixed().required(),
 });
