@@ -61,7 +61,7 @@ export default class working extends Component {
             }
           });
         }
-
+//filter for working details
         filterdata1(stationery,cat){
 
           const result1 = stationery.filter((stationery) =>
