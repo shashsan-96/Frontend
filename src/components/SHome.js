@@ -48,16 +48,18 @@ filterdata(stationery,searchkey){
 
   this.setState({stationery:result})
 }
+//admin search function
+ 
 
-  handleSearchArea = (e) =>{
-    const searchkey=e.currentTarget.value;
-    axios.get("/stationery").then(res=>{
-      if(res.data.success){
+handleSearchArea = (e) =>{
+  const searchkey=e.currentTarget.value;
+  axios.get("/stationery").then(res=>{
+    if(res.data.success){
 
-        this.filterdata(res.data.existingstationery,searchkey)
-      }
-    });
-  }
+      this.filterdata(res.data.existingstationery,searchkey)
+    }
+  });
+}
 
   handleSearchArea = (e) =>{
     const searchkey =e.currentTarget.value;
