@@ -71,6 +71,7 @@ export default class office extends Component {
           
         }
 
+        //handle category of office
         handleCategory =(e)=>{
           const cat = e.currentTarget.value;
           axios.get("/stationery").then(res=>{
@@ -79,13 +80,15 @@ export default class office extends Component {
               this.filterdata1(res.data.existingstationery,cat)
              
               
-              
               console.log(this.state.stationery)
+              
             }
           });
       
       }
       
+      
+
       getallstationeries = (e)=>{
         axios.get("/stationery").then(res=>{
           if(res.data.success){
@@ -96,8 +99,6 @@ export default class office extends Component {
           }
         });
       }
-
-
 
 
       
