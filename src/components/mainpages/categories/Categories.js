@@ -11,6 +11,7 @@ function Categories() {
     const [onEdit, setOnEdit] = useState(false)
     const [id, setID] = useState('')
 
+    //create category
     const createCategory = async e =>{
         e.preventDefault()
         try {
@@ -34,12 +35,14 @@ function Categories() {
         }
     }
 
+    //edit category
     const editCategory = async (id, name) =>{
         setID(id)
         setCategory(name)
         setOnEdit(true)
     }
 
+    //delete category
     const deleteCategory = async id =>{
         try {
             const res = await axios.delete(`/api/category/${id}`, {
@@ -52,6 +55,7 @@ function Categories() {
         }
     }
 
+    //category page
     return (
         <div className="categories">
             <form id="form" onSubmit={createCategory}>
