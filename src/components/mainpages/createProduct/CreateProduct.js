@@ -82,6 +82,7 @@ function CreateProduct() {
         }
     }
 
+    //delete book product
     const handleDestroy = async () => {
         try {
             if(!isAdmin) return alert("You're not an admin")
