@@ -17,6 +17,7 @@ const initialState = {
     _id: ''
 }
 
+//create product(book)
 function CreateProduct() {
     const state = useContext(GlobalState)
     const [product, setProduct] = useState(initialState)
@@ -51,6 +52,7 @@ function CreateProduct() {
         }
     }, [param.id, products])
 
+    //upload image
     const handleUpload = async e =>{
         e.preventDefault()
         try {
@@ -140,7 +142,10 @@ function CreateProduct() {
                 
             </div>
 
+           {/*  create (book) product form */}
             <form onSubmit={handleSubmit}>
+
+               {/*  (book) prduct id */}
                 <div className="row">
                     <label htmlFor="product_id">Book ID </label>
                     <input type="text" name="product_id" id="product_id" placeholder="EXX000000" maxLength="9" 
@@ -148,18 +153,21 @@ function CreateProduct() {
                     value={product.product_id} onChange={handleChangeInput} disabled={onEdit} />
                 </div>
 
-                   <div className="row">
+               {/*  book title */}
+                <div className="row">
                     <label htmlFor="title">Title</label>
                     <input type="text" name="title" id="titlen" placeholder="please enter book title" title="Book title" required
                     value={product.title} onChange={handleChangeInput} />
                 </div>
                
+              {/*  author of the book */}
                 <div className="row">
                     <label htmlFor="author">Author</label>
                     <input type="text" name="author" id="author" placeholder="please enter author name" title="Author of the book" required
                     value={product.author} onChange={handleChangeInput} />
                 </div>
 
+               {/*  language of the book */}
                 <div className="row">
                     <label htmlFor="language">Language</label>
                     <select name="language" value={product.language} onChange={handleChangeInput} required>
@@ -170,6 +178,7 @@ function CreateProduct() {
                     </select>
                 </div>
 
+            {/*category of the book */}
                 <div className="row">
                     <label htmlFor="categories">Category: </label>
                     <select name="category" value={product.category} onChange={handleChangeInput} required>
@@ -184,30 +193,35 @@ function CreateProduct() {
                     </select>
                 </div>
 
+                {/* price of the book */}
                 <div className="row">
                     <label htmlFor="isbn">Price (LKR)</label>
                     <input type="number" name="price" id="pricenew" min="0" required
                     value={product.price} onChange={handleChangeInput} />
                 </div>
 
+                {/* isbn of the book */}
                 <div className="row">
                     <label htmlFor="isbn">ISBN</label>
                     <input type="text" name="isbn" id="isbn" placeholder="XXXXXXXXXXXXX" title="Enter ISBN 13" maxLength="13" min="1" required
                     value={product.isbn} onChange={handleChangeInput} />
                 </div>
 
+                {/* publisher of the book */}
                 <div className="row">
                     <label htmlFor="publisher">Publisher</label>
                     <input type="text" name="publisher" id="publisher" placeholder="please enter publisher name" required
                     value={product.publisher} onChange={handleChangeInput} />
                 </div>
 
+               {/* description of the book */}
                 <div className="row">
                     <label htmlFor="description">Description</label>
                     <textarea type="text" name="description" id="description" required placeholder="please enter product description"
                     value={product.description} rows="5" onChange={handleChangeInput} />
                 </div>
 
+                {/* reset and submit button */}
                 <button type="reset">{onEdit? "Reset" : "Reset"}</button>
                 <button type="submit">{onEdit? "Update" : "Create"}</button>
             </form>
