@@ -1,0 +1,64 @@
+.categories h1{
+    display: block;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-left: -50px;
+    margin-top: 1cm;
+}
+#create_btn, #edit_btn, #delete_btn{
+    height: 35px;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid #555;
+    width: 50px;
+    background: rgb(9, 41, 146);
+    color: white;
+    margin-left: 10px;
+    border-radius: 5px;
+}
+#edit_btn{
+    margin-left: 0.3cm;
+    background: green;
+    height: 30px;
+    width: 30px;
+}
+#delete_btn{
+    background: crimson;
+    height: 30px;
+    width: 30px;
+}
+#row{
+    margin-left: 1cm;
+    margin-top: 1cm;
+    width: 260px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 2px solid rgb(153, 151, 151);
+    border-radius: 5px;
+    font-weight: bold;
+}
+#creatediv{
+    margin-left: 630px;
+    margin-top: -40px;
+    width: 250px;
+}
+#create_btn{
+    width: 250px;
+    height: 1cm;
+}
+#form{
+    margin-left: 100px;
+}
+#input{
+    margin-top: 1cm;
+    margin-left: 330px;
+    width: 300px;
+}
+.col{
+    display: flex;
+}
