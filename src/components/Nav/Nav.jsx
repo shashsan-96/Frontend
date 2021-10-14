@@ -2,6 +2,9 @@ import React, { useState, useEffect } from 'react';
 import Button from 'react-bootstrap/Button';
 import Link from '../Link/Link';
 
+
+
+
 const Nav = () => {
   const [navClass, setNavClass] = useState('');
   const [toggeledNav, settoggeledNav] = useState(false);
