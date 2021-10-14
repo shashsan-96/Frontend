@@ -1,3 +1,4 @@
+
 import React, { Component } from 'react';
 import {BrowserRouter,Route } from 'react-router-dom';
 import CreatedStationery from './components/CreateStationery';
@@ -67,5 +68,16 @@ export default class App extends Component {
      
     );
   }
+
+import '../src/scss/main.scss';
+import Routes from './Routes';
+import { BrowserRouter as Router} from "react-router-dom";
+function App() {
+ return (
+  <Router>
+    <Routes />
+  </Router>
+  );
+
 }
 
