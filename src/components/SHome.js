@@ -18,7 +18,16 @@ componentDidMount(){
   this.retrievestationerys();
 }
 
-
+retrievestationerys(){
+    axios.get("/stationery").then(res=>{
+      if(res.data.success){
+        this.setState({
+          stationery:res.data.existingstationery
+        });
+        console.log(this.state.stationery)
+      }
+    });
+  }
 
 
   onDelete = (id) =>{
